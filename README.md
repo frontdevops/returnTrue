@@ -195,3 +195,9 @@ function closure(x) {
 }
 ```
 
+## Any
+```js
+function any(x) {
+    return x - 1 === x + 1
+}
+```
