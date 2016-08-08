@@ -190,6 +190,7 @@ function greaterself(x) {
 }
 
 greaterself({n:0,valueOf:function(){return++this.n%2?9:7}})
+greaterself({valueOf:$=>(this.n=-~this.n)%2?9:7}) // shorter
 ```
 
 ## Closure
