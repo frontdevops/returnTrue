@@ -221,3 +221,12 @@ function isarray(x) {
 
 isarray(new Proxy([],{get:(o,p)=>p=='map'?void 0:o[p]}))
 ```
+
+## Brainfuck
+```js
+function brainfuck(x) {
+	return x(/2/ << /3/) === 16;
+}
+
+brainfuck((RegExp.prototype.valueOf=function(){return this.source},x=>x))
+```
