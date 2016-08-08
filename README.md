@@ -201,3 +201,12 @@ function any(x) {
     return x - 1 === x + 1
 }
 ```
+
+## Isarray
+```js
+function isarray(x) {
+    return Array.isArray(x) && x instanceof Array && x.map === undefined
+}
+
+isarray(new Proxy([],{get:(o,p)=>p=='map'?void 0:o[p]}))
+```
