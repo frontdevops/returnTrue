@@ -77,7 +77,7 @@ function undef(x) {
     return !{ undefined: { undefined: 1 } }[typeof x][x];
 }
 
-▶ undef(????)
+undef((Object.prototype['number']=0,0))
 ```
 
 ## Symmetric
