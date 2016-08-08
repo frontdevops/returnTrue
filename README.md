@@ -28,6 +28,7 @@ function counter(f) {
 }
 
 counter((x=1)=>$=>x++)
+counter(x=>$=>x=-~x)   // -2 symbols
 ```
 
 ## Peano
