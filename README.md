@@ -186,6 +186,8 @@ random4(????)
 function greaterself(x) {
     return x > 8 && 8 > x;
 }
+
+greaterself({n:0,valueOf:function(){return++this.n%2?9:7}})
 ```
 
 ## Closure
@@ -193,6 +195,8 @@ function greaterself(x) {
 function closure(x) {
     return x[x] == x;
 }
+
+closure([0]);
 ```
 
 ## Any
@@ -200,6 +204,9 @@ function closure(x) {
 function any(x) {
     return x - 1 === x + 1
 }
+
+any(2**54)
+any(1/0)
 ```
 
 ## Isarray
