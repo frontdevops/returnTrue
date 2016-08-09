@@ -86,7 +86,8 @@ function symmetric(x,y) {
     return x == y && y != x;
 }
 
-▶ symmetric(????)
+symmetric(1,{valueOf:$=>n=-~this.n})
+symmetric(n=1,{valueOf:$=>n++})
 ```
 
 ## Ouroborobj
