@@ -248,3 +248,17 @@ function brainfuck(x) {
 
 brainfuck((RegExp.prototype.valueOf=function(){return this.source},x=>x))
 ```
+
+## Native code
+```js
+{
+	const toString = Function.prototype.toString;
+	function native(x) {
+		return	(x() === 8) &&
+				(x.toString() === 'function () { [native code] }') &&
+				(toString.call(x) === x.toString())
+  }
+}
+
+native( function(){return 1}.bind(null) );
+```
