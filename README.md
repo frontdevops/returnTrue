@@ -152,12 +152,24 @@ random1(Math.random=$=>'call')
 
 ## Random2
 ```js
-var rand = Math.random();
-function random2(x) {
-  return rand in x;
+{
+	let rand = Math.random();
+	function random2(x) {
+	  return rand in x;
+	}
 }
 
 random2(new Proxy({},{has:$=>$}))
+```
+
+### Random2.1 (if has access to global scope)
+```js
+var rand = Math.random();
+function random21(x) {
+  return rand in x;
+}
+
+random21({[rand]:1}))
 ```
 
 ## Random3
@@ -176,9 +188,11 @@ function random3(x) {
 
 ## Random4
 ```js
-var rand = Math.random();
-function random4(x) {
-    return rand === x;
+{
+	let rand = Math.random();
+	function random4(x) {
+	    return rand === x;
+	}
 }
 
 random4(????)
