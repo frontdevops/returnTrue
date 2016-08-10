@@ -260,5 +260,5 @@ brainfuck((RegExp.prototype.valueOf=function(){return this.source},x=>x))
 	}
 }
 
-native( function(){return 1}.bind(null) );
+native( function(){return 8}.bind(null) );
 ```
