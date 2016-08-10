@@ -51,6 +51,7 @@ function array(x,y) {
 }
 
 array(a=Array.prototype,{__proto__:a}) 
+array((Array.isArray=x=>x[0],'1'),[])
 ```
 
 ## Instance
@@ -59,7 +60,7 @@ function instance(x,y) {
   return x instanceof y && y instanceof x && x !== y;
 }
 
-▶ instance(????)
+instance(Object,Function)
 ```
 
 ## Proto1
@@ -68,6 +69,7 @@ function proto1(x) {
     return x && !("__proto__" in x);
 }
 
+proto1(Object.create(null))
 proto1({__proto__:null})
 ```
 
@@ -144,7 +146,8 @@ function random1(x) {
     return Math.random() in x;
 }
 
-random1((Math.random=$=>0,[0])) 
+random1((Math.random=$=>0,[0]))
+random1(Math.random=$=>'call')
 ```
 
 ## Random2
