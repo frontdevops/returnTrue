@@ -1,10 +1,10 @@
 # returnTrue
 
-----
-
 **Help**
 
 ![truth-table](https://raw.githubusercontent.com/frontdevops/returnTrue/master/truth-table.png)
+
+Demo: http://codepen.io/i0z/pen/GqPKKA?editors=1010
 
 ----
 
