@@ -58,8 +58,11 @@ function array(x,y) {
           !Array.isArray(y) &&  (y instanceof Array);
 }
 
-array(a=Array.prototype,{__proto__:a}) 
-array((Array.isArray=x=>x[0],'1'),[])
+array( a=Array.prototype,{__proto__:a})
+array( (Array.isArray=x=>x[0],'1'),[] )
+array( '1',[],Array.isArray=x=>x[0]   )
+array( Array.isArray=x=>x.length,[]   )
+array( Array.isArray=$=>x--,[],x=1    )
 ```
 
 ## Instance
@@ -88,6 +91,7 @@ function undef(x) {
 }
 
 undef((Object.prototype['number']=0,0))
+undef(document.all)
 ```
 
 ## Symmetric
@@ -117,6 +121,8 @@ function truth(x) {
 }
 
 truth((Number.prototype.valueOf=$=>1,0))
+truth('',''.__proto__.valueOf=_=>1)
+truth(0,0..__proto__.valueOf=_=>1)
 ```
 
 ## Wat
@@ -156,6 +162,7 @@ function random1(x) {
 
 random1((Math.random=$=>0,[0]))
 random1(Math.random=$=>'call')
+random1([0],Math.random=_=>0)
 ```
 
 ## Random2
