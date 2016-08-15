@@ -277,3 +277,14 @@ brainfuck((RegExp.prototype.valueOf=function(){return this.source},x=>x))
 
 native( function(){return 8}.bind(null) );
 ```
+
+## Instance2
+```js
+function instance2(x,y) {
+  return x instanceof y && y instanceof x && x == y;
+}
+
+instance2(Function, Function)
+instance2(x=Function, x)
+```
+
