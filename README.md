@@ -336,3 +336,12 @@ function isObject(x) {
 
 isObject(null);
 ```
+
+## UndefinedObject
+```js
+function undefinedObject(x) {
+	return typeof x == 'undefined' && x instanceof Object;
+}
+
+undefinedObject(document.all);
+```
