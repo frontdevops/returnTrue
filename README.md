@@ -311,6 +311,17 @@ function reflexive2(x) {
 reflexive2(NaN);
 ```
 
+## Numbers
+```js
+function num1(a) { // new Number(1)
+	return a == 1 && a instanceof Number
+}
+
+function num2(a) { // Nan
+	return typeof a == 'number' && !(a instanceof Number)
+}
+```
+
 ## Sum1
 ```js
 function summ1(x, y) {
