@@ -302,3 +302,28 @@ instance2(x=Function, x)
 
 minest( Number.MIN_VALUE )
 ```
+
+## Reflexive2
+```js
+function reflexive2(x) {
+	return 'number' == typeof x && x != x
+}
+reflexive2(NaN);
+```
+
+## Sum1
+```js
+function summ1(x, y) {
+	return x + y === 0.3
+}
+summ1(0, 0.3);
+```
+
+## Summ2
+```js
+function summ2(x, y) {
+	return x + 0.2 === 0.3
+}
+
+summ2(0.09999999999999998);
+```
