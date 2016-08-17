@@ -327,3 +327,12 @@ function summ2(x, y) {
 
 summ2(0.09999999999999998);
 ```
+
+## IsObject
+```js
+function isObject(x) {
+	return (typeof x == 'object') && !(x instanceof Object)
+}
+
+isObject(null);
+```
