@@ -384,3 +384,22 @@ function _new(x) {
 _new( function(){} )
 _new( class A{}    )
 ```
+
+## New2
+```js
+function _new2(x) {
+	return x() instanceof x;
+}
+
+_new2( function a(){ if(!(this instanceof a)) return new a } );
+```
+
+## New3
+```js
+function _new(x) {
+	return x() instanceof x && x.name === '';
+}
+
+_new(function(){if(!(this instanceof arguments.callee))return new arguments.callee})
+```
+
