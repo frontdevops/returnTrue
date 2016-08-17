@@ -356,3 +356,13 @@ function undefinedObject(x) {
 
 undefinedObject(document.all);
 ```
+
+## Joke
+```js
+function joke(s, x) {
+	return s == new x(s.length +1);
+}
+
+joke(',,,', Array);
+```
+
