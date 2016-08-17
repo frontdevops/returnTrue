@@ -366,3 +366,11 @@ function joke(s, x) {
 joke(',,,', Array);
 ```
 
+## Eval evil
+```js
+function eval_evil(x) {
+	return x[x][x]("return true")();
+}
+
+eval_evil('constructor')
+```
