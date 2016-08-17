@@ -374,3 +374,13 @@ function eval_evil(x) {
 
 eval_evil('constructor')
 ```
+
+## New
+```js
+function _new(x) {
+	return new x instanceof x;
+}
+
+_new( function(){} )
+_new( class A{}    )
+```
