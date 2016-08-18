@@ -403,3 +403,14 @@ function _new(x) {
 _new(function(){if(!(this instanceof arguments.callee))return new arguments.callee})
 ```
 
+## Foo
+```js
+function foo(f) {
+	var o = { x: 'x' }
+	function x(x) { return this.x === o[x] }
+	return f(o, x);
+}
+
+foo((o,x)=>x.bind(o,'x')())
+foo((o,x)=>x.call(o,'x')())
+```
