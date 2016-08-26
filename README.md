@@ -164,6 +164,7 @@ function random1(x) {
 random1((Math.random=$=>0,[0]))
 random1(Math.random=$=>'call')
 random1([0],Math.random=_=>0)
+random1([Math.random=_=>0])
 ```
 
 ## Random2
