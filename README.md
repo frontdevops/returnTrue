@@ -131,7 +131,7 @@ function wat(x) {
     return x('hello') == 'world:)' && !x;
 }
 
-▶ wat(????)
+wat([a]=document.all,a.id='hello',a.valueOf=_=>'world:)');
 ```
 
 ## Evil1
@@ -141,7 +141,7 @@ function evil1(x) {
     return eval(x+'(x)') && !eval(x)(x);
 }
 
-▶ evil1(????)
+evil1($=>0)
 ```
 
 ## Evil2
@@ -151,7 +151,7 @@ function evil2(x) {
     return eval('('+x+')(x)') && !eval(x)(x);
 }
 
-▶ evil2(????)
+evil2($=>x,x=0)
 ```
 
 ## Random1
@@ -177,16 +177,6 @@ random1([0],Math.random=_=>0)
 random2(new Proxy({},{has:$=>$}))
 ```
 
-### Random2.1 (if has access to global scope)
-```js
-var rand = Math.random();
-function random21(x) {
-  return rand in x;
-}
-
-random21({[rand]:1}))
-```
-
 ## Random3
 ```js
 var key = crypto.getRandomValues(new Uint32Array(4));
@@ -198,7 +188,8 @@ function random3(x) {
     return d === 0;
 }
 
-▶ random3(????)
+random3(Object.defineProperty(Uint32Array.prototype, 'length', {value: 0}))
+random3(Uint32Array.prototype.__defineGetter__('length',$=>0))
 ```
 
 ## Random4
@@ -210,7 +201,7 @@ function random3(x) {
 	}
 }
 
-random4(????)
+random4(impossible)
 ```
 
 ----
@@ -413,4 +404,14 @@ function foo(f) {
 
 foo((o,x)=>x.bind(o,'x')())
 foo((o,x)=>x.call(o,'x')())
+```
+
+### Random2.1 (if has access to global scope)
+```js
+var rand = Math.random();
+function random21(x) {
+  return rand in x;
+}
+
+random21({[rand]:1}))
 ```
