@@ -72,6 +72,7 @@ function instance(x,y) {
 }
 
 instance(Object,Function)
+instance(Object,Proxy)
 ```
 
 ## Proto1
