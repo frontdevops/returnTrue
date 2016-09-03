@@ -417,3 +417,17 @@ function random21(x) {
 
 random21({[rand]:1}))
 ```
+
+### Date
+```js
+function date(x) {
+	var d = new Date,
+ 		a = [d];
+
+	return a[x]() == [([d.getDate(),d.getMonth()+1,d.getFullYear()].map(i=>(''+i).replace(/^([0-9])$/,'0$1')).join('.')),
+([d.getHours(),d.getMinutes(),d.getSeconds()].map(i=>('0'+i).slice(-2)).join(':'))
+].join(', ');
+}
+
+date('toLocaleString');
+```
