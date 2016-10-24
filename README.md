@@ -431,3 +431,13 @@ function date(x) {
 
 date('toLocaleString');
 ```
+
+### Nill
+```js
+function nil(x) {
+  return (x != null) && (x <= null) && (x >= null)
+}
+
+nil(0)
+```
+
