@@ -63,6 +63,7 @@ array( (Array.isArray=x=>x[0],'1'),[] )
 array( '1',[],Array.isArray=x=>x[0]   )
 array( Array.isArray=x=>x.length,[]   )
 array( Array.isArray=$=>x--,[],x=1    )
+array( 0,[Array.isArray=>x=>!x]       )
 ```
 
 ## Instance
