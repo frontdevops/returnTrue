@@ -288,13 +288,14 @@ brainfuck((RegExp.prototype.valueOf=function(){return this.source},x=>x))
 {
 	const toString = Function.prototype.toString;
 	function native(x) {
-		return	(x() === 8) &&
+		return	(x() === 1) &&
 				(x.toString() === 'function () { [native code] }') &&
 				(toString.call(x) === x.toString())
 	}
 }
 
-native( function(){return 8}.bind(null) );
+function(){return 1}.bind(null)
+(_=>1).bind()
 ```
 
 ## Instance2
