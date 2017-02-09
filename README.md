@@ -79,6 +79,23 @@ instance(Object,Function)
 instance(Object,Proxy)
 ```
 
+## Instance2
+```
+function instance2(a,b,c) {
+  return a !== b && b !== c && a !== c
+      && a instanceof b
+      && b instanceof c 
+      && c instanceof a;
+}
+
+Object,Function,{[Symbol.hasInstance]:_=>!0}   44
+a=Object,Function,{[Symbol.hasInstance]:a}     42
+a=Object,Function,c=_=>_,c.__proto__=a         38
+a=Object,Function,new Proxy(a,a)               32
+a=Object,a.bind(),a.bind()                     26
+```
+
+
 ## Proto1
 ```js
 function proto1(x) {
