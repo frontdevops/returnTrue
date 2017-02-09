@@ -64,6 +64,9 @@ array( '1',[],Array.isArray=x=>x[0]   )
 array( Array.isArray=x=>x.length,[]   )
 array( Array.isArray=$=>x--,[],x=1    )
 array( 0,[Array.isArray=>x=>!x]       )
+array( [].__proto__,{__proto__:[]}    )
+array( x=[],x.__proto__=null,x),Object.create([]) ) // = 43
+array( Array.isArray=String,[]        ) // = 23
 ```
 
 ## Instance
