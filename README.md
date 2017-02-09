@@ -7,6 +7,10 @@
 Demo: http://codepen.io/i0z/pen/GqPKKA?editors=1010
 
 
+![truth-table](https://raw.githubusercontent.com/frontdevops/returnTrue/master/truth-table-extended.png)
+
+Demo: http://codepen.io/i0z/pen/pbGqVZ?editors=1010
+
 ----
 
 ## Reflexive
